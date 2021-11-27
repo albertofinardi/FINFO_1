@@ -45,36 +45,30 @@ void dividi_stringa(char str[], char **s1, char **s2){
 	len = strlen(str);
 	
 	len1 = len/2;
-	if(len%2)
-		len2 = len1 + 1;
-	else
-		len2 = len1;
+	len2 = len - len1;
 
 	*s1 = malloc((len1+1)*sizeof(char));
-	*s2 = malloc((len2+1)*sizeof(char));
 
-	if(*s1 && *s2){
-		for(i=0, j=0; i<len; i++){
-			if(i<len1){
+	if(*s1){
+		*s2 = malloc((len2+1)*sizeof(char));
+		if(*s2){
+			
+			for(i=0; i<len1; i++)
 				(*s1)[i] = str[i];
-			}
-			else{
-				(*s2)[j] = str[i];
-				j++;
-			}
+			(*s1)[len1] = '\0';
+
+			for( ; i<len; i++)
+				(*s2)[i] = str[i];
+			(*s2)[len2] = '\0';
+
+		}else{
+			printf("Errore allocazione memoria\n");
+			free(*s1);
+			*s1 = NULL;
 		}
-		(*s1)[len1] = '\0';
-		(*s2)[len2] = '\0';
 	}else{
 		printf("Errore allocazione memoria\n");
-		if(*s1)
-			free(*s1);
-		if(*s2)
-			free(*s2);
-		*s1 = NULL;
 		*s2 = NULL;
 	}
-
-
 
 }
