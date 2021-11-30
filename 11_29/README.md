@@ -1,7 +1,7 @@
 # Appunti
 
 ## Debugger (GDB)
-- Installa GDB
+- Installa GDB.
 Sostituisci `${nome_file}` con il nome del file **.c** .
 Sostituisci `${nome_exec}` con il nome dell'**eseguibile**.
 

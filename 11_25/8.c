@@ -13,25 +13,52 @@ compatta sarà: (4,2) (2, 3) (3, 1). Infatti il valore 4 compare due
 volte nella lista di partenza, il valore 2 tre volte e il valore 3
 una volta.
 */
-/*
-typedef struct nodo_compatto{
-	int n, volte;
-	struct nodo_compatto *next;
+
+typedef struct nodo_compatto_{
+	int num, volte;
+	struct nodo_compatto_ *next;
 } nodo_compatto_t;
 
 nodo_compatto_t* nodoToNodoCompatto(nodo_t*);
 
 nodo_compatto_t* nodoToNodoCompatto(nodo_t *h){
-	nodo_compatto_t *h_comp, *tmp;
+	nodo_compatto_t *h_comp, *curr, *tmp, *prec;
+	int presente;
 	h_comp = NULL;
 
-	if(h){
-		while(h){
 
-			h = h->next;
+	while(h){
+		for(curr = h_comp, presente = 0; curr && !presente; curr = curr->next){
+			if(cur->num == h->num){
+				presente = 1;
+				curr->volte += 1;
+			}
 		}
+
+		if(!presente){
+			/*Aggiungi in coda*/
+			tmp = malloc(sizeof(nodo_compatto_t));
+			if(tmp){
+				tmp->num = h->num;
+				tmp->volte = 1;
+				tmp->next = NULL;
+
+				if(h_comp){
+					for(prec = h_comp; prec && prec->next; prec = prec->next);
+					prec->next = tmp;
+				}else{
+					h_comp = tmp;
+				}
+
+			}else{
+				printf("Errore allocazione memoria\n");
+				/*Distruggi lista*/
+			}
+		}
+
+		h = h->next;
 	}
+
 
 	return h_comp;
 }
-*/
