@@ -18,7 +18,7 @@ int main(){
 
 	scanf("%d %d", &a, &b);
 
-	minmax(&a, &b, &min, &max);
+	minmax(a, b, &min, &max);
 
 	printf("Minimo: %d, massimo: %d\n", min, max);
 
