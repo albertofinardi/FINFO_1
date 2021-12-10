@@ -1,0 +1,31 @@
+Nome: Gummi
+Indirizzo: via Cerutti 37, Ancona
+Componenti:
+	N. 1
+		Codice: 1
+		Nome: maniglia
+		Quantità: 7
+	N. 2
+		Codice: 2
+		Nome: asse
+		Quantità: 15
+	N. 3
+		Codice: 3
+		Nome: vetro
+		Quantità: 2
+	N. 4
+		Codice: 4
+		Nome: cerniera
+		Quantità: 12
+	N. 5
+		Codice: 5
+		Nome: vite
+		Quantità: 50
+	N. 6
+		Codice: 6
+		Nome: serratura
+		Quantità: 5
+	N. 7
+		Codice: 7
+		Nome: chiudiporta
+		Quantità: 10

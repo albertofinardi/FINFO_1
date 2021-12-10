@@ -3,9 +3,13 @@ Scrivere un sottoprogramma che riceve in ingresso un array di valori interi v e 
 */
 
 int intervallo(int v[], int dim, int da, int a){
-	int i, valid;
-	for(i=0, valid = 1; i<dim && valid; i++){
-		if(!(v[1] >= da && v[i] <= a))
+	int i, j, valid, conto;
+	for(i=da, valid = 1; i<= a && valid; i++){
+		for(j=0, conto=0; j<dim && conto <= 1; j++){
+			if(v[j] == i)
+				conto++;
+		}
+		if(conto != 1)
 			valid = 0;
 	}
 

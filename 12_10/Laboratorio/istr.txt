@@ -1,0 +1,16 @@
+Codice: 2367
+Descrizione: Sedia
+Costo: 70.000000
+Componenti:
+	N. 1
+		Codice: 173
+		Nome: schienale
+		Quantità: 1
+	N. 2
+		Codice: 912
+		Nome: seduta
+		Quantità: 1
+	N. 3
+		Codice: 479
+		Nome: gamba
+		Quantità: 4

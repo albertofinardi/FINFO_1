@@ -72,6 +72,7 @@ nodo_t* mancanti(nodo_t *codici){
 			}
 			if(!presente){
 				/* Ho usato la libreria fatta in classe, per cui cambia nome ma è la stessa funzione */
+				/* Va bene anche inserisciInCoda al posto di inserisciInOrdine perchè sono già in ordine */
 				//mancanti_h = insert_inc(mancanti_h, i);
 				mancanti_h = inserisciInOrdine(mancanti_h, i);
 			}
