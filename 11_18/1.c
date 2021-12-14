@@ -23,7 +23,7 @@ int main() {
 			scanf("%d", p+i); /*oppure &p[i]*/
 		}
 		for(i=dim-1; i>=0; i--){
-			printf("%d\n", *(p+i)); /*oppure &p[i]*/
+			printf("%d\n", *(p+i)); /*oppure p[i]*/
 		}
 
 		free(p); /* p punta ad una cella random ora */
