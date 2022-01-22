@@ -1,5 +1,5 @@
 ---
-name: Feature request
+name: Exercise request
 about: Suggest other exercises
 title: ''
 labels: ''
